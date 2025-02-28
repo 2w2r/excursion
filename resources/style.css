@@ -1,3 +1,4 @@
+/* RESET */
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16;
@@ -7,26 +8,51 @@
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-style: normal;
-    font-weight: normal;
-}
-
+/* GENERAL */
 html {
     color: white;
     background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    --margin-header: 2.09375rem;
+    --margin-content: 1.3125rem;
+    --color-subdued: gray;
 }
 
-header h1 {
+h1, h2, h3, h4, h5, h6 {
+    font-style: normal;
+    font-weight: normal;
+    margin: var(--margin-header);
+}
+
+a, video, p, footer {
+    margin: var(--margin-content);
+}
+
+p, footer {
+    color: var(--color-subdued);
+}
+
+/* HEADER */
+
+h1 {
     font-size: 3.125rem;
-    margin: 2.09375rem;
 }
 
-header a {
+a {
     color: aquamarine;
-    margin: 1.3125rem;
 }
 
+/* CONTENT */
+h2 {
+    font-weight: 300;
+    font-size: 2.625rem;
+}
+
+p {
+    font-size: var(--margin-content);
+}
+
+/* FOOTER */
+
+footer {
+    text-align: right;
+}
